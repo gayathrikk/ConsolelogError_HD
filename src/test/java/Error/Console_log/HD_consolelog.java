@@ -332,14 +332,9 @@ public class HD_consolelog {
 	    	 System.out.println("*******************************Opacity window validation done*********************************");
 	    }
 		
-		  private void clearConsoleLog() {
-		        // Execute JavaScript to clear the console log
-		        driver.executeScript("console.clear();");
-		    }
-
+		  
 		    private void checkConsoleLog() {
 		        // Clear console log
-		        clearConsoleLog();
 
 		        // Retrieve console log entries
 		        LogEntries entry = driver.manage().logs().get(LogType.BROWSER);

@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Error.Console_log.Reg_consolelog">
+      <class name="Error.Console_log.Colab_consolelog">
         <methods>
-          <include name="Retrive"/>
-          <include name="Rotation"/>
+          <include name="afterTest"/>
           <include name="setup"/>
-          <include name="tearDown"/>
+          <include name="mouseBrain"/>
         </methods>
-      </class> <!-- Error.Console_log.Reg_consolelog -->
+      </class> <!-- Error.Console_log.Colab_consolelog -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

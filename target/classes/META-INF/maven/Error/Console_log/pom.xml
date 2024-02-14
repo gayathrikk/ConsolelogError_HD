@@ -70,7 +70,7 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M5</version>
           <configuration>
-            <test>Error.Console_log.Reg_consolelog</test>
+            <test>Error.Console_log.Colab_consolelog</test>
           </configuration>
         </plugin>
       </plugins>
