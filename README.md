@@ -3,3 +3,4 @@
 # ConsolelogError_Atlas
 # ConsoleLogError_Cell
 # ConsolelogError_Reg
+# ConsolelogError_Colab
