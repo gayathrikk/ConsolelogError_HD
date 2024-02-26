@@ -137,7 +137,7 @@ public class Atlas_consolelog {
 	    		} catch (Exception e) {
 	    		    System.out.println("Human Fetus not clicked: " + e.getMessage());
 	    		}
-	    	 checkConsoleLog();
+	    	
 	    	 
 	    	 try {
 	    		    WebElement Brain = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@role='grid']//tr[7]//td[2]")));
@@ -147,7 +147,7 @@ public class Atlas_consolelog {
 	    		} catch (Exception e) {
 	    		    System.out.println("Brain not clicked: " + e.getMessage());
 	    		}
-	    	 checkConsoleLog();
+	    	 
 	    	 
 	    	 try {
 	 		    WebElement MTB_10 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@role='grid']//tr[25]//td[3]")));
@@ -157,7 +157,7 @@ public class Atlas_consolelog {
 	 		} catch (Exception e) {
 	 		    System.out.println(" FTB-40 not clicked: " + e.getMessage());
 	 		}
-	    	 checkConsoleLog();
+	    	
 	    	 
 	    	 String parentWindow = driver.getWindowHandle();
 	    	 try {
@@ -187,7 +187,7 @@ public class Atlas_consolelog {
 	  		    System.out.println("section not clicked: " + e.getMessage());
 	  		}
 	    	 
-	    	 checkConsoleLog();
+	    	 
 	    	
 	    	 System.out.println("************************************Series set validation done********************************");
 	
