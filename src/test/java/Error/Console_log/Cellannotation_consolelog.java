@@ -127,7 +127,7 @@ public class Cellannotation_consolelog {
 	
 			
 	    	 try {
-	    		    WebElement Mouse = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@class='cdk-table nb-tree-grid']//tr[6]")));
+	    		    WebElement Mouse = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@role='grid']//tr[6]")));
 	    		    Mouse.click();
 	    		    System.out.println("Human Fetus clicked successfully.");
 	    		    Thread.sleep(2000);
@@ -137,7 +137,7 @@ public class Cellannotation_consolelog {
 	    	 
 	    	 
 	    	 try {
-	    		    WebElement Brain = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@class='cdk-table nb-tree-grid']//tr[7]//td[2]")));
+	    		    WebElement Brain = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@role='grid']//tr[7]//td[2]")));
 	    		    Brain.click();
 	    		    System.out.println(" Brain clicked successfully.");
 	    		    Thread.sleep(2000);
@@ -147,13 +147,32 @@ public class Cellannotation_consolelog {
 	    	
 	    	 
 	    	 try {
-	 		    WebElement MTB_10 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@class='cdk-table nb-tree-grid']//tr[25]//td[3]")));
+	 		    WebElement MTB_10 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@role='grid']//tr[25]//td[3]")));
 	 		    MTB_10.click();
 	 		    System.out.println("FTB-40 clicked successfully.");
 	 		    Thread.sleep(2000);
 	 		} catch (Exception e) {
 	 		    System.out.println(" FTB-40 not clicked: " + e.getMessage());
 	 		}
+	    	 
+	    	 String parentWindow = driver.getWindowHandle();
+	    	 try {
+		 		    WebElement viewericon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//nb-icon[@nbtooltip='Viewer']")));
+		 		   viewericon.click();
+		 		    System.out.println("viewer icon is clicked successfully.");
+		 		    Thread.sleep(2000);
+		 		} catch (Exception e) {
+		 		    System.out.println(" viewer icon is not clicked: " + e.getMessage());
+		 		}
+	    	 
+	    	 wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+			  Set<String> allWindows = driver.getWindowHandles();
+		        for (String window : allWindows) {
+		            if (!window.equals(parentWindow)) {
+		                driver.switchTo().window(window);
+		                break;
+		            }
+		        }
 	    	 
 	    	 
 	    	 try {
